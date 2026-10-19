@@ -31,10 +31,7 @@ for i in range(0, len(bits), 8):
 
     # Transformamos os 8 bits em um número
     for bit in grupo:
-        # << 1 desloca os bits uma posição para a esquerda (multiplica por 2)
-        # | bit adiciona o novo bit ao final do número
-        # Equivale a: numero = numero * 2 + bit
-        numero = (numero << 1) | bit
+        numero = numero * 2 + bit
 
     if numero == 0:
         break

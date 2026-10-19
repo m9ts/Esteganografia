@@ -23,8 +23,10 @@ pixels = list(imagem.get_flattened_data())
 
 novos_pixels = []
 
+# posição do bit na mensagem
 indice = 0
 
+# valores dos canais (RGB) do pixel atual
 for r, g, b in pixels:
 
     if indice < len(bits):
@@ -51,4 +53,4 @@ nova_imagem.putdata(novos_pixels)
 
 nova_imagem.save("nova_imagem.png")
 
-print("A mensagem escondida")
+print("A mensagem foi escondida...")
